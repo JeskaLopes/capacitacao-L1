@@ -1,0 +1,61 @@
+package aula2;
+
+import java.util.Scanner;
+
+public class exemplo2 {
+
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner(System.in);
+		
+		//validação de usuário
+		
+		String nomeUsuario = "jessica", usuarioInputado;
+		
+		
+		for (int tentativas=1; tentativas < 3; tentativas ++) {
+			System.out.println("Digite seu usuário");
+			usuarioInputado = ler.next();
+			
+			if(nomeUsuario == usuarioInputado) {
+				System.out.println("Usuário incorreto, digite novamente");
+				usuarioInputado = ler.next();
+			}
+			else {
+				System.out.println("Logado");
+			}
+			
+		}
+		System.out.println("VocÊ excedeu as tentativas. ");
+		
+		
+		System.out.println("Digite o primeiro numero");
+		int numeroA = ler.nextInt();
+		
+		System.out.println("Digite o segundo numero");
+		int numeroB = ler.nextInt();
+
+		System.out.println("Digite a operação desejada 1-Soma, 2-Subtração, 3-Divisão e 4-Multiplicação");
+		int operador = ler.nextInt();
+		
+		double valorFinal = 0;
+		if(operador == 1) {
+			valorFinal = (numeroA + numeroB);
+		}
+		
+		else if(operador == 2) {
+			valorFinal = (numeroA - numeroB);
+		}
+		
+		else if(operador == 3) {
+			valorFinal = (numeroA / numeroB);
+		}
+		
+		else {
+			valorFinal = (numeroA * numeroB);
+		}
+		
+		System.out.println("Valor final " + valorFinal);
+	}
+
+}

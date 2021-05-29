@@ -1,0 +1,25 @@
+package aula2;
+
+import java.util.Scanner;
+
+public class exemplo1 {
+
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner(System.in);
+		
+		double saldo = 200 , valorSaque;
+		
+		System.out.println("Qual valor você gostaria de sacar? ");
+		valorSaque = ler.nextDouble();
+		
+		double saldoFinal = (saldo - valorSaque);
+		
+		if(saldo > valorSaque) {
+			System.out.println("Saque realizado com sucesso, seu saldo agora é: " + saldoFinal);
+		}
+		else {
+			System.out.println("Você não tem saldo suficiente, vai precisar de cheque especial");
+		}
+	}
+}

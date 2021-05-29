@@ -1,0 +1,23 @@
+package aula3;
+
+public class ContaCorrente {
+	
+	//atributos
+	String nome;
+	String numeroConta;
+	String agencia;
+	String pix;
+	double saldo;
+	
+	//métodos
+	void extrato() {
+		System.out.println("----Informações da conta do cliente----" + "\n");
+		System.out.println("Nome da conta: " + nome);
+		System.out.println("Número da conta: " + numeroConta);
+		System.out.println("Agência da conta: " + agencia);
+		System.out.println("Chave PIX da conta: " + pix);
+		System.out.println("Saldo da conta: " + saldo);
+		System.out.println("---------------------");
+	};
+	
+}

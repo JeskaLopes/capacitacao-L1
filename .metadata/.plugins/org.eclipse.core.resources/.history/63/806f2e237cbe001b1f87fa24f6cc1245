@@ -1,0 +1,61 @@
+package aula2;
+
+import java.util.Scanner;
+
+public class desafioPizzaria {
+
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner(System.in);
+		
+		//escopo de variáveis
+
+		String nomeUsuario = "jess", usuarioInputado;
+		
+		System.out.println("Digite seu usuário");
+		usuarioInputado = ler.next();
+		
+		for (int tentativas=1; tentativas < 3; tentativas ++) {
+			if(nomeUsuario.equals(usuarioInputado)) {
+				System.out.println("Bem vinde a Pizzaria");
+				
+				
+				System.out.println("|=======================================|");
+				 System.out.println("| Pizzaria da Villa");
+				 System.out.println("| Menu");
+				 System.out.println("|");
+				 System.out.println("| 1 - Cadastro de Clientes");
+				 System.out.println("| 2 - Cadastro de Produtos");
+				 System.out.println("| 3 - Iniciar Pedido (On ou Televenda");
+				 System.out.println("| 4 - Método de Pagamento");
+				 System.out.println("| 5 - Gerar Cupom");
+				 System.out.println("| 6 - Sair");
+				 System.out.println("|");
+				 System.out.println("|======================================|" + "\n");
+				 
+				 System.out.println("Qual seria a opção desejada ?");
+				 int opcao = ler.nextInt();
+					
+					switch(opcao) {
+					
+					case 1: 
+						System.out.println("Você escolheu o Cadastro de Clientes - Em instantes você será redirecionado para fazê-lo");
+						break;
+						
+					default:
+						System.out.println("Opção invalida");
+					}
+			}
+			if(tentativas > 3 ) {
+				System.out.println("Você excedeu o limite de tentativas, não vai rolar :/");
+			}
+			else {
+				System.out.println("Usuario incorreto, tente novamente");
+				usuarioInputado = ler.next();
+			}
+			return;
+		}
+		
+	}
+
+}

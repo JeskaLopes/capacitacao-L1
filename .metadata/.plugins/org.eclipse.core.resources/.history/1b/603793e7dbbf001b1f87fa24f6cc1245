@@ -1,0 +1,16 @@
+package aula3;
+
+public class ClienteBanco {
+	
+	//atributos
+	String nome;
+	String endereco;
+	String cep;
+	double telefone;
+	String email;
+	
+	//métodos
+	void mostrarDetalhes() {
+		System.out.println("Nome do Cliente: " + nome);
+	};
+}

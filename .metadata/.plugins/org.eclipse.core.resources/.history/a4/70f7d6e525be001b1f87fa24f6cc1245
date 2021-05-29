@@ -1,0 +1,26 @@
+package aula2;
+
+import java.util.Scanner;
+
+public class exemplo2 {
+
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner(System.in);
+		
+		System.out.println("Digite o primeiro numero");
+		int numeroA = ler.nextInt();
+		
+		System.out.println("Digite o segundo numero");
+		int numeroB = ler.nextInt();
+
+		System.out.println("Digite a operação desejada 1-Soma, 2-Subtração, 3-Divisão e 4-Multiplicaçao");
+		int operador = ler.nextInt();
+		
+		double valorFinal = 0;
+		if(operador == 1) {
+			(numeroA + numeroB) = valorFinal;
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+package aula3;
+
+public class TesteLivros {
+
+	public static void main(String[] args) {
+		
+		Livros livro1 = new Livros();
+		
+		livro1.nome = "Angular";
+		livro1.genero = "Programacao";
+
+	}
+
+}

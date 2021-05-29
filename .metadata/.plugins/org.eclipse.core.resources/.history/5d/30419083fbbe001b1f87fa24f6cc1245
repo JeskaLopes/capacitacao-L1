@@ -1,0 +1,20 @@
+package preparacaoAula;
+
+
+public class maiorNota {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int nota = 100;
+		
+		if(nota >= 50 || nota == 100) {
+			System.out.println("Aprovado");
+		}
+		
+		if(nota < 50 ) {
+			System.out.println("reprovado");
+		}
+	}
+
+}

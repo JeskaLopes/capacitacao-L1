@@ -1,0 +1,41 @@
+package aula3;
+
+public class TesteLivros {
+
+	public static void main(String[] args) {
+		
+		Livros livro1 = new Livros();
+		
+		livro1.nome = "Java";
+		livro1.genero = "Programacao";
+		livro1.tipoDeMidia = "Fisica";
+		livro1.edicao = "12";
+		livro1.autor = "Jessica";
+		livro1.anoDePublicacao = "2021";
+		livro1.editora = "Antena";
+		livro1.idioma = "portugues";
+		livro1.prefacio = "teste";
+		livro1.isbn = "123";
+		livro1.edicao = "0";
+		
+		livro1.exibirLivro();
+		
+		Livros livro2= new Livros();
+		
+		livro2.nome = "CSS";
+		livro2.genero = "Programacao";
+		livro2.tipoDeMidia = "Fisica";
+		livro2.autor = "Camilla";
+		livro2.anoDePublicacao = "2021";
+		livro2.editora = "Antena";
+		livro2.edicao = "12";
+		livro2.idioma = "portugues";
+		livro1.prefacio = "teste1";
+		livro2.isbn = "456";
+		livro2.edicao = "0";
+		
+		livro2.exibirLivro();
+		
+	}
+
+}
