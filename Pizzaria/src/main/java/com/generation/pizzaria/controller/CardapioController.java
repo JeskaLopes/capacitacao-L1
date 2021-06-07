@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.pizzaria.model.Cardapio;
+import com.generation.pizzaria.model.Cliente;
 import com.generation.pizzaria.repository.CardapioRepository;
 
 @RestController
@@ -39,6 +40,12 @@ public class CardapioController {
 	public ResponseEntity<Cardapio> getById(@PathVariable long id){		
 		return repository.findById(id).map(cardapio -> ResponseEntity.ok(cardapio))
 				.orElse(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());		
+	}
+	
+	//get pelo preço
+	@GetMapping("/por-preco/{preco}")
+	public ResponseEntity<List<Cardapio>> getAllByPreco(@PathVariable double preco) {
+		return ResponseEntity.ok(repository.pegarPorPrecoMaiorQue(preco));
 	}
 	
 	//post para inserir itens no cardapio - precisa de requestbody

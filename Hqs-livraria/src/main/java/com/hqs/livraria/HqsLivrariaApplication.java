@@ -8,6 +8,7 @@ public class HqsLivrariaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HqsLivrariaApplication.class, args);
+		
 	}
 
 }

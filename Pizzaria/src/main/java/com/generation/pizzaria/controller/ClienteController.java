@@ -3,6 +3,7 @@ package com.generation.pizzaria.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -37,6 +38,16 @@ public class ClienteController {
 				.orElse(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
 	}
 	
+	//quando precisamos de uma rota com o mesmo parametro utilizamos uma sub-rota(por-nome)
+	@GetMapping("/por-nome/{nome}")
+	public ResponseEntity<List<Cliente>> getAllByNome(@PathVariable String nome) {
+		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
+	}
+	
+	@GetMapping("/por-email/{email}")
+	public ResponseEntity<List<Cliente>> getAllByEmail(@PathVariable String email) {
+		return ResponseEntity.ok(repository.findAllByEmailContainingIgnoreCase(email));
+	}
 	
 	@PostMapping
 	public ResponseEntity<Cliente> post(@RequestBody Cliente cliente) {
