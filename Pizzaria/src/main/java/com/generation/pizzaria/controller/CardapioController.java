@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,11 +17,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.pizzaria.model.Cardapio;
-import com.generation.pizzaria.model.Cliente;
 import com.generation.pizzaria.repository.CardapioRepository;
+
 
 @RestController
 @RequestMapping("/cardapio")
+@CrossOrigin(value="*", allowedHeaders ="*")
 public class CardapioController {
 	
 	//para tratar o cardápio como objeto e poder manipula-lo
